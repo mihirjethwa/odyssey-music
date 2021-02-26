@@ -1,0 +1,16 @@
+.Album{
+    
+}
+
+.Album-container{
+    display: flex;
+    flex-direction: row;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.table-hover:hover{
+    background-color:hsla(0,0%,100%,.3);
+    border-radius: 12px !important;
+    cursor: pointer;
+}

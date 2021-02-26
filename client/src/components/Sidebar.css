@@ -1,0 +1,80 @@
+.Sidebar-container {
+  width: 230px;
+  height: 100vh;
+  background-color: #262626;
+  /* background: linear-gradient(to bottom, #3366ff 0%, #ff66ff 101%); */
+  display: flex;
+  flex-direction: column;
+  padding: 0 12px;
+  /* position: sticky; */
+  position: -webkit-sticky;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+.Sidebar-name {
+  margin: 10px 0;
+  align-items: baseline;
+  text-align: center;
+}
+.Sidebar-heavy {
+  font-weight: 1000;
+  font-size: larger;
+  color: #64fcf2;
+  /* color:linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);  */
+}
+.Sidebar-light {
+  font-weight: 200;
+  color: #f4f4f4;
+}
+
+.Sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+}
+.Sidebar-option {
+  display: flex;
+  margin-bottom: 12px;
+  width: 100%;
+  align-items: center;
+}
+.Sidebar-menu-item {
+  color: #f4f4f4;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 6px;
+  opacity: 0.6;
+}
+.Sidebar-menu-item > p {
+  margin-left: 8px;
+  transition: 1000ms color ease-in;
+}
+
+.Sidebar-menu-item:hover {
+  opacity: 1;
+  cursor: pointer;
+  transition: 1000ms color ease-in;
+}
+
+.Sidebar-menu-active {
+  color: white !important;
+  opacity: 1 !important;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: #1f1f1f;
+}
+
+.Sidebar-hr {
+  margin: 8px;
+  background-color: #66fcf1;
+  border: none;
+  height: 2px;
+  margin: 8px 0px;
+}
+.Sidebar-about {
+  margin-top: 8px;
+}
