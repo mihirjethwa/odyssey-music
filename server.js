@@ -14,6 +14,7 @@ const Language = require("./routes/api/language");
 const app = express();
 app.use(cors());
 app.use(compression());
+app.use(express.json());
 // app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(bodyParser.json());
 
@@ -36,38 +37,29 @@ app.use("/api/song", Song);
 app.use("/api/language", Language);
 
 //For error
-app.use(async (req, res, next) => {
-  // const error = new Error("Not found");
-  // error.status = 404;
-  // next(error)
-  next(createError.NotFound());
-});
+// app.use(async (req, res, next) => {
+//   // const error = new Error("Not found");
+//   // error.status = 404;
+//   // next(error)
+//   next(createError.NotFound());
+// });
 
-app.use((err, req, res, next) => {
-  res.status(err.status || 500);
-  res.send({
-    error: {
-      status: err.status || 500,
-      message: err.message,
-    },
-  });
-});
+// app.use((err, req, res, next) => {
+//   res.status(err.status || 500);
+//   res.send({
+//     error: {
+//       status: err.status || 500,
+//       message: err.message,
+//     },
+//   });
+// });
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 
   app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "/client/build/index.html"));
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
   });
-
-  // app.get("*", (req, res) => {
-  //   res.sendFile(path.sendFile(__dirname, "client", "build", "index.html"));
-  // });
-  // app.use(express.static(path.join(__dirname, "./client/build")));
-
-  // app.get("*", (req, res) => {
-  //   res.sendFile(path.join(__dirname, "./client/build", "index.html"));
-  // });
 }
 
 //Creating port
