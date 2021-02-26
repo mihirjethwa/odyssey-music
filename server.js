@@ -9,7 +9,7 @@ const path = require("path");
 const Artist = require("./routes/api/artists");
 const Album = require("./routes/api/albums");
 const Song = require("./routes/api/songs");
-const Language = require("./routes/api/Language");
+const Language = require("./routes/api/language");
 
 const app = express();
 app.use(cors());
