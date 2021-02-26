@@ -18,6 +18,8 @@ package-lock.json
 .vscode/
 /.idea
 *.sublime-workspace
+/.adminbro
+
 
 # testing
 /coverage
