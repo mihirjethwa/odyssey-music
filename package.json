@@ -9,7 +9,7 @@
     "client": "npm start --prefix client",
     "start": "node server.js",
     "server": "nodemon server.js",
-    "heroku-postbuild": "cd client && npm install --force && npm run build"
+    "heroku-postbuild": "cd client && npm install --force && npm run --openssl-legacy-provider build"
   },
   "author": "mihir",
   "license": "MIT",
