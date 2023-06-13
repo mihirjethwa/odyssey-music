@@ -27,5 +27,8 @@
     "http-errors": "^1.8.0",
     "mongoose": "^5.10.11",
     "nodemon": "^2.0.6"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }

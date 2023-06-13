@@ -7,7 +7,8 @@ const service = {
     Accept: "application/json",
     "Content-Type": "application/json",
   },
-  baseURL: "https://odyssey-music.herokuapp.com/api/",
+  // baseURL: "https://odyssey-music.herokuapp.com/api/",
+  baseURL: "https://odyssey-music.netlify.app/api/",
 
   async getData(url, isSuccess, isError) {
     Store.dispatch(setLoader(true));
