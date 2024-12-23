@@ -60,8 +60,8 @@ const adminBro = new AdminBro({
 });
 
 const ADMIN = {
-  email: process.env.ADMIN_EMAIL || "test@test.com",
-  password: process.env.ADMIN_PASSWORD || "test@1234",
+  email: process.env.ADMIN_EMAIL || "t@t.com",
+  password: process.env.ADMIN_PASSWORD || "t@1...",
 };
 
 const adminRouter = AdminBroExpress.buildAuthenticatedRouter(adminBro, {
